@@ -41,14 +41,14 @@ AppAsset::register($this);
  
     
     if (Yii::$app->user->isGuest) {
-        $submenuItems[] = ['label' => '<span class="glyphicon glyphicon-log-in"></span> เข้าสู่ระบบ', 'url' => ['/site/login']];
-        $submenuItems[] = ['label' => '<span class="glyphicon glyphicon-user"></span> สมาชิก', 'url' => ['/site/signup']];
+        $submenuItems[] = ['label' => '<span class="glyphicon glyphicon-log-in"></span> เข้าสู่ระบบ', 'url' => ['/user/security/login']];
+        $submenuItems[] = ['label' => '<span class="glyphicon glyphicon-user"></span> สมาชิก', 'url' => ['/user/registration/register']];
         
 
 
     } else {
         $submenuItems[] = ['label' => '<span class="glyphicon glyphicon-book"></span> โปรไฟล์', 'url' => ['/user/settings/profile']];
-        $submenuItems[] = ['label' => '<span class="glyphicon glyphicon-log-out"></span> ออกจากระบบ', 'url' => ['/site/logout'], 'linkOptions' => ['data-method' => 'post']];
+        $submenuItems[] = ['label' => '<span class="glyphicon glyphicon-log-out"></span> ออกจากระบบ', 'url' => ['/user/security/logout'], 'linkOptions' => ['data-method' => 'post']];
     }
         $username = '';
         if (!Yii::$app->user->isGuest) {

@@ -18,9 +18,18 @@ return [
         'request' => [
             'csrfParam' => '_csrf-frontend',
         ],
+        /*
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
+            'identityCookie' => ['name' => '_identity-frontend', 'httpOnly' => true],
+        ],
+         */
+        'user' => [
+          //'identityClass' => 'common\models\User',
+            'identityClass' => 'dektrium\user\models\User',
+            'enableAutoLogin' => true,
+            'authTimeout' => 1800, //value: 1800 (30 นาที))
             'identityCookie' => ['name' => '_identity-frontend', 'httpOnly' => true],
         ],
         'session' => [
@@ -49,7 +58,18 @@ return [
         */
     ],
     'modules' => [
-
+        'user' => [
+            'class' => 'dektrium\user\Module',
+            'enableUnconfirmedLogin' => true,
+            'enableConfirmation' => false,
+            'cost' => 12,
+            'confirmWithin' => 21600, //Default value: 86400 (24 hours))
+            'admins' => ['admin']
+        ],
+        
+        'report' => [
+            'class' => 'frontend\modules\report\Module',
+        ],
     ],
     'params' => $params,
 ];

@@ -1,4 +1,4 @@
 <script>
-    window.location='./frontend/web/index.php';
+    window.location='./web/index.php';
 </script>
 
