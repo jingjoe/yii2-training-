@@ -168,7 +168,7 @@ $this->params['breadcrumbs'][] = $this->title;
         // set your toolbar
             'toolbar' =>  [
                 ['content' => 
-                    Html::a('<i class="glyphicon glyphicon-repeat"></i>', ['report/default/rep1'], ['data-pjax' => 0, 'class' => 'btn btn-default', 'title' => Yii::t('app', 'รีเซ็ต')])
+                    Html::a('<i class="glyphicon glyphicon-repeat"></i>', ['/report/default/rep1'], ['data-pjax' => 0, 'class' => 'btn btn-default', 'title' => Yii::t('app', 'รีเซ็ต')])
                 ],
                 '{toggleData}',
                 '{export}',

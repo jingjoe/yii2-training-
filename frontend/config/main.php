@@ -70,6 +70,9 @@ return [
         'report' => [
             'class' => 'frontend\modules\report\Module',
         ],
+        'gridview' => [
+            'class' => '\kartik\grid\Module'
+        ]
     ],
     'params' => $params,
 ];

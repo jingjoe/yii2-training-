@@ -1,8 +1,10 @@
 <?php
 
 namespace frontend\modules\report\controllers;
-
+use Yii;
 use yii\web\Controller;
+use yii\db\Query;
+use yii\data\ArrayDataProvider;
 
 /**
  * Default controller for the `report` module

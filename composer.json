@@ -21,7 +21,11 @@
         "kartik-v/yii2-nav-x": "@dev",
         "kartik-v/yii2-widget-select2": "dev-master",
         "dektrium/yii2-user": "^0.9.14",
-        "miloschuman/yii2-highcharts-widget": "^7.1"
+        "miloschuman/yii2-highcharts-widget": "^7.1",
+        "kartik-v/yii2-widget-datepicker": "dev-master",
+        "dmstr/yii2-adminlte-asset": "^2.1",
+        "kartik-v/yii2-grid": "dev-master",
+        "kartik-v/yii2-mpdf": "dev-master"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",
